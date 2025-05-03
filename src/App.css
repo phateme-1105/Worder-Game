@@ -1,0 +1,246 @@
+body {
+  background-color: #183b4e;
+  color: white;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  height: 100vh;
+}
+
+nav {
+  height: 60px;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #f3f3e0;
+}
+
+nav h1 {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 45px;
+}
+.game {
+  width: 100vw;
+  height: calc(100vh - 170px);
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+}
+
+.show {
+  height: 500px;
+}
+
+.board {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.row {
+  flex: 33%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.letter {
+  /* flex: 33%; */
+  height: 40px;
+  width: 40px;
+  border: 1px solid grey;
+  margin: 5px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.correct {
+  background-color: #528d4e;
+}
+
+.almost {
+  background-color: #e1d60a;
+}
+
+.error {
+  background-color: #3a393c;
+}
+
+.container {
+  width: 700px;
+  flex-grow: 1;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.line1 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.line2 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+}
+.line3 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.key {
+  width: 50px;
+  height: 70px;
+  margin: 5px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  background-color: grey;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+#big {
+  width: 100px;
+}
+#disabled {
+  background-color: #3a393c;
+}
+
+.key-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.keyboard.disabled {
+  opacity: 0.6;
+}
+
+/* startScreen */
+
+.start-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #74abe2, #5563de);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.start-screen h1 {
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+/* Container for the options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.options button {
+  background: linear-gradient(45deg, #27548a, #27548a);
+  border: none;
+  padding: 1.2rem 2rem;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.options button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.options button:active {
+  transform: scale(0.95);
+}
+
+/* Result Screen */
+
+.result-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.result {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #183b4e;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0px 0px 15px #f3f3e0;
+}
+
+.result h2 {
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+
+.result button {
+  background: linear-gradient(45deg, #5ab4e4, #1f7cec);
+  border: none;
+  color: #fff;
+  padding: 1.2rem 2rem;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+.result button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.result button:active {
+  transform: scale(0.95);
+}
