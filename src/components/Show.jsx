@@ -4,9 +4,10 @@ import Board from './Board';
 import Letter from './Letter';
 
 const Show = () => {
-    const {history, correctWord} =useContext(AppContext);
+    const {history, correctWord, timeLeft} =useContext(AppContext);
   return (
     <div className='show'>
+      <div>{timeLeft}</div>
      <div >
       {history.map((word, index) => <div key={index} className='board' >
         {word.map((letter, index) =>{

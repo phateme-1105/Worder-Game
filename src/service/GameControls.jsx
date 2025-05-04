@@ -1,5 +1,3 @@
-
-
 export const onSelectLetter = (keyValue, board, pos, setBoard, setPos) => {
     if(pos.letterPos > 4) return ; 
     const newBoard = [...board];
